@@ -1,0 +1,32 @@
+[project]
+name = "wonder-qr"
+version = "0.1.0"
+description = "Decode QR and barcodes and convert label images to and from ZPL"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "Pillow==12.3.0",
+    "zxing-cpp==3.1.1",
+]
+
+[project.scripts]
+wonder-qr = "wonder_qr.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.12.13,<0.13"]
+build-backend = "uv_build"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+
+[tool.basedpyright]
+pythonVersion = "3.12"
+typeCheckingMode = "all"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
