@@ -19,7 +19,7 @@ wonder-qr decode label.png --output decoded.json
 wonder-qr to-zpl label.png --mode raster --dpmm 8 --width-mm 100 --height-mm 50 --output label.zpl
 ```
 
-이 문서 작성 과정에서는 설치를 수행하지 않았습니다. 개발 환경의 lock 파일이 생성된 뒤에는 `uv sync --locked --python 3.12` 및 `uv run --locked wonder-qr --help`를 사용할 수 있습니다.
+이 프로젝트에서는 uv 관리형 Python 3.12.14와 프로젝트 `.venv`로 `uv sync` 및 `uv run --locked wonder-qr --help` 경로를 사용합니다. `uv tool install`은 이 프로젝트에서 아직 실행·검증하지 않았습니다.
 
 ## 제한 사항
 
